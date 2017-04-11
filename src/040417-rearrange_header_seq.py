@@ -17,7 +17,7 @@ with open(fasta, 'r') as f:
 		# if header line	
 		if line[0] == '>':
 			# capture IDs of interest from header and save as tuple
-			match = re.search(">gnl\|TC-DB\|(.*?)\|([A-Za-z\d\.]*)", line)
+			match = re.search("^>gnl\|TC-DB\|(.*?)\|([A-Za-z\d\.]*)", line)
 			curr = (match.group(2), match.group(1))
 			genes[curr] = ''
 		else:
