@@ -2,7 +2,8 @@ import sys, re
 
 '''
 Parses headers in input and extracts and reformats gene identifiers,
-followed by sequence in single string
+followed by second column containing the gene sequence as a one-line
+string
 '''
 
 fasta = sys.argv[1]
