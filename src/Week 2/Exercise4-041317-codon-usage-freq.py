@@ -43,7 +43,7 @@ with open(in_file, 'r') as f:
 			'\t'.join(str(local_counter[c]) for c in sorted(others)),\
 			'\t', '\t'.join(str(local_counter[c]) for c in sorted(stops)),\
 			'\t', len(seq)/3
-    # print bottom row (output global count of codons)
+    # print bottom row (output global count of codons, ATG, other codons in sorted order, stop codons)
 	print 'Totals\t', str(global_counter['ATG']), '\t', \
 		'\t'.join(str(global_counter[c]) for c in sorted(others)),\
 		'\t', '\t'.join(str(global_counter[c]) for c in sorted(stops)),\
