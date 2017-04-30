@@ -13,6 +13,6 @@ with open('README', 'r') as f:
 		if re.search(sys.argv[1], line):
 			line = line.split()
 			id_list.append(line[0])
-	# esecute shell cmd to download reference proteome for each id in list of IDs and save to folder whose name is ID
+	# execute shell cmd to download reference proteome for each id in list of IDs and save to folder whose name is ID
 	for i in id_list:
 		os.system('wget -P {} ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Bacteria/{}_*'.format(i, i))
