@@ -1,6 +1,11 @@
 import sys, os, re
 
-# execute shell cmd to download README file from Uniprot reference proteomes side to current directory
+'''
+This script downloads README file for Uniprot reference proteomes and parses it to download proteomes
+that match user-defined keywords to individual folders
+'''
+
+# execute shell cmd to download README file from Uniprot reference proteomes site to current directory
 os.system('wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/README')
 
 # open README
