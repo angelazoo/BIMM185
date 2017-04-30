@@ -2,7 +2,7 @@ import sys, os, re
 
 '''
 This script downloads README file for Uniprot reference proteomes and parses it to download proteomes
-that match user-defined keywords to individual folders
+(that match user-defined keyword) to individual folders
 '''
 
 # execute shell cmd to download README file from Uniprot reference proteomes site to current directory
