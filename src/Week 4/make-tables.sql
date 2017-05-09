@@ -8,13 +8,13 @@ parsed from Genbank record for the genome
 */
 create table genomes (
 	genome_id int(10) unsigned not null,
+	genome_name varchar(100) not null,
 	tax_id int(10) unsigned not null,
-	genome_s_name varchar(50) not null,
-	genome_l_name varchar(100) not null,
-	size_bp int(10) unsigned not null,
 	domain enum('bacteria','archaea','eukarya') not null,
-	gb_accession varchar(50) not null,
-	gb_release_date varchar(50) not null,
+	num_replicons int(10) unsigned not null,
+	num_genes int(10) unsigned not null,	
+	size_bp int(10) unsigned not null,
+	assembly varchar(100) not null,
 	primary key (genome_id),
 	key (tax_id)
 ) engine=InnoDB;
@@ -28,9 +28,12 @@ create table replicons (
 	replicon_id int(10) unsigned not null,
 	genome_id int(10) unsigned not null,
 	name varchar(100) not null,
-	num_genes int(10) unsigned not null,
 	replicon_type enum('chromosome','plasmid') not null,
 	replicon_structure enum('linear','circular') not null,
+	num_genes int(10) unsigned not null,
+	len_bp int(10) unsigned not null,
+	gb_accession varchar(50) not null,
+	gb_release_date varchar(50) not null,
 	primary key (replicon_id),
 	key (genome_id)
 ) engine=InnoDB;
@@ -45,6 +48,7 @@ create table genes (
 	genome_id int(10) unsigned not null,
 	replicon_id int(10) unsigned not null,
 	locus_tag varchar(25) not null,
+	prot_id varchar(25) not null,	
 	name varchar(100) not null,
 	strand varchar(5) not null,
 	num_exons int(10) unsigned not null,
