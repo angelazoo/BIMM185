@@ -1,7 +1,7 @@
 import MySQLdb
 
 #connect to MySQL
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="xxxxxxx", db="azou_db")
 #define cursor object to execute MySQL commands
 c=db.cursor()
 #create operons table with operon, gene name and locus tag columns
