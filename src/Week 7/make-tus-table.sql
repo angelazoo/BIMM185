@@ -1,4 +1,4 @@
---Script makes blast_genome table in MySQL
+--Script makes tus table in MySQL to store transcriptional units information
 
 create table tus (
     gid_1 varchar(10) not null,
