@@ -1,7 +1,14 @@
 import MySQLdb
 
+'''
+This script creates operons table in MySQL and performs a series of joins with existing data to
+output a resulting flat file containing positional information for each gene belonging to a
+known operon and positional information for all genes in the E.coli genome along with their operon
+membership status
+'''
+
 # connect to mysql server
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="XXXXXXXX", db="azou_db")
 # create cursor object to execute commands on db
 c=db.cursor()
 # create operons table with operon name, gene name, loc_tag fields
