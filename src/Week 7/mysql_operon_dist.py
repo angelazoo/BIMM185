@@ -1,6 +1,6 @@
 import MySQLdb
 
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="xxxxxxx", db="azou_db")
 c=db.cursor()
 c.execute("""create table if not exists operons (operon varchar(80) not null, gname varchar(50) not null, loc_tag varchar(25) not null) engine=InnoDB""")
 c.execute("""load data local infile '/home/linux/ieng6/bm185s/azou/Week6/operon_genes.txt' into table operons (operon, gname, loc_tag)""")
