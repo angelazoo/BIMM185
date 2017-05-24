@@ -1,5 +1,10 @@
 import sys, re
 
+'''
+This script parses the OperonSet and GeneProducts files to extract gene and operon information
+for high confidence/confirmed operons
+'''
+
 # gene products file
 genelist = sys.argv[1]
 # operon set file
