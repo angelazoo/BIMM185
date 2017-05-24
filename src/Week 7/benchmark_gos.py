@@ -1,6 +1,12 @@
 import sys, numpy as np
 import matplotlib.pylab as plt
 
+'''
+This script performs benchmarking calculations on the probabilities computed for
+the intergenic distances corresponding to true positive (known operon) and true
+negative (known non-membership in same operon) in genome
+'''
+
 # input file is flat file (tab-sep) consisting of gid1, gid2, distance, status, and
 # calculated probability 
 with open(sys.argv[1], 'r') as f:
