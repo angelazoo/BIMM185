@@ -1,5 +1,10 @@
 import sys
 
+'''
+This script calculates intergenic distances between all pairs of genes
+located in the same operon
+'''
+
 operons_all = {}
 # open flat file containing gene name, pos, operon membership information
 with open(sys.argv[1], 'r') as f:
