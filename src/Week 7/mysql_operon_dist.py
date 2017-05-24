@@ -34,4 +34,4 @@ for r in g_o:
 c.execute("""select * from allgenes_operons order by gene_id;""")
 g_o = c.fetchall()
 for r in g_o:
-    print '\t'.join(str(e) for e in r)
+  	print '\t'.join(str(e) for e in r)
