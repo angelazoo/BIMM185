@@ -1,7 +1,7 @@
 import MySQLdb
 
 #connect to mysql
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="xxxxxxx", db="azou_db")
 # define cursor object from which to execute queries
 c=db.cursor()
 # make blast_511145 top hits table by selecting, for each gene, the hit in A.tumefaciens genome with the top bitscore
