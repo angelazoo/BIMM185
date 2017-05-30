@@ -1,7 +1,7 @@
 import MySQLdb
 
 #connect to mysql
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="xxxxxxx", db="azou_db")
 # define cursor object from which to execute queries
 c=db.cursor()
 c.execute("""create table if not exists genes_pos select genes.gene_id, genes.genome_id, genes.replicon_id, genes.locus_tag, genes.prot_id, genes.name, genes.strand, exons_2.left_pos, exons_2.right_pos from genes inner join exons_2 on (genes.gene_id = exons_2.gene_id);""")
