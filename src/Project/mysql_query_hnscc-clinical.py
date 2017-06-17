@@ -8,7 +8,7 @@ hpv_pos_non_smk = {}
 hpv_neg_yes_smk = {}
 
 #connect to mysql
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd=xxxxxxxx, db="azou_db")
 # define cursor object from which to execute queries
 c=db.cursor()
 # hpv(+) patients
