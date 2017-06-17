@@ -28,7 +28,7 @@ with open(pvalues, 'r') as f:
         i += 1'''
 
 #connect to mysql
-db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd="Gougou12", db="azou_db")
+db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd=xxxxxxxx, db="azou_db")
 # define cursor object from which to execute queries
 c=db.cursor()
 c.execute("""create table if not exists cohort_results (gene varchar(20) not null, hpv_pos_mut int(10) not null, hpv_pos_wt int(10) not null, hpv_neg_mut int(10) not null, hpv_neg_wt int(10) not null, oddsratio_1 float not null, pvalue_1 float not null, smoker_mut int(10) not null, smoker_wt int(10) not null, nonsmoker_mut int(10) not null, nonsmoker_wt int(10) not null, oddsratio_2 float not null, pvalue_2 float not null, hpvpos_nonsmoker_mut int(10) not null, hpvpos_nonsmoker_wt int(10) not null, hpvpos_smoker_mut int(10) not null, hpvpos_smoker_wt int(10) not null, oddsratio_3 float not null, pvalue_3 float not null, bh_1 float not null, bh_2 float not null, bh_3 float not null);""") 
