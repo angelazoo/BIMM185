@@ -1,6 +1,6 @@
 import sys
 import MySQLdb
-'''from rpy2.robjects.packages import importr
+from rpy2.robjects.packages import importr
 from rpy2.robjects.vectors import FloatVector
 
 pvalues = sys.argv[1]
@@ -25,7 +25,7 @@ with open(pvalues, 'r') as f:
     i = 0
     for line in f:
         print '\t'.join([line.rstrip(), str(p_adjust_1[i]), str(p_adjust_2[i]), str(p_adjust_3[i])])
-        i += 1'''
+        i += 1
 
 #connect to mysql
 db=MySQLdb.connect(host="bm185s-mysql.ucsd.edu", user="azou", passwd=xxxxxxxx, db="azou_db")
